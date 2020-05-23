@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="main-risk.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="risk-container">
+    <div class="risk-header">
+      <h1>Ryzyko u Filipa</h1>
+    </div>
+    <div>
+      <div class="inputValues">
+        <label class="risk-label"><strong>Ilość państw</strong> </label>
+        <input id="risk-number-of-countries" type="number">
+        <label class="risk-label" style="margin-top: 10px;"><strong>Liczba pod koniem</strong></label>
+        <div class="risk-select-container">
+          <select class="risk-select" id="risk-select-number-under-horse">
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+            <option value="60">60</option>
+          </select>
+        </div>
+      </div>
+      <div class="risk-checkBoxes-container" id="risk-selected-continents">
+        <label class="risk-continent-label">Afryka<input class="risk-continent-checkbox" type="checkbox" value="3"><span
+            class="risk-checkmark"></span></label>
+        <label class="risk-continent-label">Europa<input class="risk-continent-checkbox" type="checkbox" value="5"><span
+            class="risk-checkmark"></span></label>
+        <label class="risk-continent-label">Azja<input class="risk-continent-checkbox" type="checkbox" value="7"><span
+            class="risk-checkmark"></span></label>
+        <label class="risk-continent-label">Ameryka Płd<input class="risk-continent-checkbox" type="checkbox" value="2"><span
+            class="risk-checkmark"></span></label>
+        <label class="risk-continent-label">Ameryka Płn<input class="risk-continent-checkbox" type="checkbox" value="5"><span
+            class="risk-checkmark"></span></label>
+        <label class="risk-continent-label">Australia<input class="risk-continent-checkbox" type="checkbox" value="2"><span
+            class="risk-checkmark"></span></label>
+        <button id="risk-clear-form"><strong>Wyczyść wszystko</strong></button>
+      </div>
+      <div class="risk-result-container">
+        <strong><span class="risk-result-number">Żołnierze: </span><span class="risk-result-number" id="risk-result"></span></strong>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="main-risk.js"></script>
