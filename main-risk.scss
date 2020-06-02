@@ -1,0 +1,217 @@
+$white: aliceblue;
+$orange: #f39c12;
+$gray: #2c3e50;
+$gray-darker: #34495e;
+$hover: #ccc;
+$font: Arial, Helvetica, sans-serif;
+
+body {
+    background-color: $orange;
+    font: 1em/1.25em $font;
+}
+
+h1 {
+    color: $white;
+    text-align: center;
+}
+
+#risk {
+    &-number-of-countries {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid $gray;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: $gray;
+        color: $white;
+        height: 4em;
+    }
+
+    &-clear-form {
+        width: 100%;
+        background-color: $gray;
+        color: $white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &-clear-form:hover {
+        background-color: $gray-darker;
+    }
+}
+
+.risk {
+    display: table;
+    width: auto;
+    margin: 0 auto;
+
+    &-label {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    &-header {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &-inputValues {
+        color: $white;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
+
+    &-checkBoxes-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    &-continent-label {
+        color: $white;
+        font: 1em/1.25em $font;
+    }
+
+    &-continent-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-left: 2px;
+    }
+
+    &-continent-label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    &-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    &-continent-label input:checked ~ &-checkmark:after {
+        display: block;
+    }
+
+    &-continent-label &-checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &-select {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 21px;
+    }
+
+    &-select-container::after {
+        content: "\25BC";
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: $gray-darker;
+        cursor: pointer;
+        pointer-events: none;
+        -webkit-transition: 0.25s all ease;
+        -o-transition: 0.25s all ease;
+        transition: 0.25s all ease;
+    }
+
+    &-select-container:hover::after {
+        color: $orange;
+    }
+
+    &-result-number {
+        font-size: 22px;
+        color: $white;
+    }
+
+    &-result-container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    &-select-container {
+        position: relative;
+        display: flex;
+        width: 85%;
+        height: 3em;
+        line-height: 3;
+        background: $gray;
+        overflow: hidden;
+        border-radius: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: $white;
+        border-radius: 4px;
+    }
+
+    &-continent-label:hover input ~ .risk-checkmark {
+        background-color: $hover;
+    }
+
+    &-continent-label input:checked ~ .risk-checkmark {
+        background-color: $gray-darker;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background: $gray;
+    background-image: none;
+    flex: 1;
+    padding: 0 0.5em;
+    color: $white;
+    cursor: pointer;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
